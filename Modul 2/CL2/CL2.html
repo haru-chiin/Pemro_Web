@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Form Pendaftaran</h1>
+    
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Masukkan email"><br><br>
+        
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" placeholder="Masukkan alamat"></textarea><br><br>
+        
+        <button type="submit">Daftar</button>
+    </form>
+    
+    <p id="pesan" class="hidden"></p>
+    
+    <script src="CLS2.js"></script>
+</body>
+</html>

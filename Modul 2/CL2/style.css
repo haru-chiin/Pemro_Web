@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+form {
+    margin: 0 auto;
+    width: 300px; 
+    background-color: orange;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left; 
+}
+
+label, input, textarea {
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%; 
+}
+
+#nama, #email, #alamat {
+    width: 100%; 
+    display: inline-block; 
+    margin-right: 2%; 
+}
+
+button {
+    padding: 10px 20px;
+}
+
+.hidden {
+    display: none;
+}
