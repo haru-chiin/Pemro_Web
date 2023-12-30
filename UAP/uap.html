@@ -1,0 +1,108 @@
+<html lang="en">
+  <style>
+    table,
+    td,
+    tr,
+    th {
+      border: solid;
+      background-color: rgb(255, 0, 0);
+    }
+    h1 {
+      font-style: italic;
+      color: rgb(0, 0, 0);
+      position: relative;
+    }
+    div {
+      background-color: rgb(255, 127, 240);
+      padding-bottom: 100%;
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAP</title>
+  </head>
+  <body>
+    <div>
+      <h1>Daftar Barang</h1>
+      <table>
+        <tr>
+          <th>Kode</th>
+          <th>Barang</th>
+          <th>Harga</th>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td>Barang A</td>
+          <td>10.000</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Barang B</td>
+          <td>20.000</td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Barang C</td>
+          <td>30.000</td>
+        </tr>
+      </table>
+      <br />
+      <h1>Inputan User</h1>
+      <br />
+      <form onsubmit="uap()">
+        <table>
+          <tr>
+            <th><label for="kode">Masukkan kode</label></th>
+            <th>:</th>
+            <th><input type="text" name="" id="kode" /></th>
+          </tr>
+          <tr>
+            <th><label for="banyak">banyak barang</label></th>
+            <th>:</th>
+            <th><input type="text" name="" id="banyak" /></th>
+          </tr>
+          <tr>
+            <td><input type="submit" value="submit" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+  <script>
+    function uap() {
+      var kode = document.getElementById("kode").value;
+      var banyak = document.getElementById("banyak").value;
+      var harga;
+
+      switch (kode) {
+        case "001":
+          harga = 10000;
+          break;
+        case "002":
+          harga = 20000;
+          break;
+        case "003":
+          harga = 30000;
+          break;
+        default:
+          window.alert("kode anda salah");
+          return;
+      }
+      var total = harga * banyak;
+      window.alert("total harga :" + total);
+      var uang = window.prompt("masukkan uang anda");
+      if (uang === null || uang === "") {
+        window.alert("masukkan uang yang benar");
+      } else {
+        uang = parseInt(uang);
+        if (isNaN(uang)) {
+          window.alert("inputan salah");
+        } else {
+          var kembalian = uang - total;
+          window.alert("kembalian = " + kembalian);
+        }
+      }
+    }
+  </script>
+</html>
